@@ -195,7 +195,6 @@ footer h3{
     font-weight: bold;
     border-radius: 20px;
     background-color: var(--color);
-    padding: 3px 8px;
     box-shadow: inset 0 0 10px var(--not-black);
     transition: all 0.5s ease;
 }
@@ -208,4 +207,64 @@ footer h3{
 }
 .imagen img {
     max-width: 80%;
+}
+/* Cards */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 32px;
+    flex-flow: wrap;
+}
+.cards-container h2 {
+    font-size: 35px;
+    margin: 15px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.cards-container p {
+    margin-bottom: 10px;
+    color: var(--mid-dark);
+}
+.cards-container .card {
+    background-color: var(--off-white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards-container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+.cards-container .card h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+.cards-container .card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+.cards-container .card a { 
+    box-sizing: border-box;
+    padding: 3px 8px    ;
+    font-size: 30px;
+    font-family: "montserrat", sans-serif;
+    color: var(--not-black);
+    font-weight: bold;
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: 10px; 
 }
