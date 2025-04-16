@@ -1,109 +1,113 @@
-/* Eliminacion de todos los estilos */
-*{
+/* Reset*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
- /* Declaracion de variables y colores */
-:root{
-    --color:#FDE639;
+
+/* Variables */
+:root {
     --main-color: #fcdf03;
-    --off-white: #EEF0F2;
+    --color: #fde639;
+    --off-white: #eef0f2;
     --not-black: #080808;
-    --light-color: #C6C7C4;
     --dark-color: #0c0c0c;
     --light-color: #ece0c8;
     --mid-light: #949993;
     --shadow: #0005;
-    --linear-rainbow: linear-gradient(to right,#ede6bf,#ecc947,#cb5a31,#6f5d79,#4e779);
-    --circle-rainbow: radial-gradient(circle at left top,#ede6bf,#ecc947,#cb5a31,#6f5d79,#4e779a);
     --mid-dark: #535353;
     --background: linear-gradient(150deg,
-    var(--dark-color) 60.2%,
-    var(--mid-dark) 60.28%,
-    var(--mid-dark) 60.7%,
-    var(--dark-color) 60.78%,
-    var(--dark-color) 61.4%,
-    var(--mid-dark) 61.48%,
-    var(--mid-dark) 62.6%,
-    var(--dark-color) 62.68%,
-    var(--dark-color) 63.4%,
-    var(--mid-dark) 63.48%,
-    var(--mid-dark) 64.6%,
-    var(--dark-color) 64.68%,
-    var(--dark-color) 65.4%,
-    var(--mid-dark) 65.48%,
-    var(--mid-dark) 67.4%,
-    var(--dark-color) 67.48%,
-    var(--dark-color) 68.4%,
-    var(--mid-dark) 68.48%,
-    var(--mid-dark) 71.4%,
-    var(--dark-color) 71.48%,
-    var(--dark-color) 72.4%,
-    var(--mid-dark) 72.48%,
-    var(--mid-dark) 76.4%,
-    var(--dark-color) 76.48%,
-    var(--dark-color) 77.4%,
-    var(--mid-dark) 77.48%,
-    var(--mid-dark) 81.4%,
-    var(--dark-color) 81.48%,
-    var(--dark-color) 82.4%,
-    var(--mid-dark) 82.48%,
-    var(--mid-dark) 87.4%,
-    var(--dark-color) 87.48%);
+            var(--dark-color) 60.2%,
+            var(--mid-dark) 60.28%,
+            var(--mid-dark) 60.7%,
+            var(--dark-color) 60.78%,
+            var(--dark-color) 61.4%,
+            var(--mid-dark) 61.48%,
+            var(--mid-dark) 62.6%,
+            var(--dark-color) 62.68%,
+            var(--dark-color) 63.4%,
+            var(--mid-dark) 63.48%,
+            var(--mid-dark) 64.6%,
+            var(--dark-color) 64.68%,
+            var(--dark-color) 65.4%,
+            var(--mid-dark) 65.48%,
+            var(--mid-dark) 67.4%,
+            var(--dark-color) 67.48%,
+            var(--dark-color) 68.4%,
+            var(--mid-dark) 68.48%,
+            var(--mid-dark) 71.4%,
+            var(--dark-color) 71.48%,
+            var(--dark-color) 72.4%,
+            var(--mid-dark) 72.48%,
+            var(--mid-dark) 76.4%,
+            var(--dark-color) 76.48%,
+            var(--dark-color) 77.4%,
+            var(--mid-dark) 77.48%,
+            var(--mid-dark) 81.4%,
+            var(--dark-color) 81.48%,
+            var(--dark-color) 82.4%,
+            var(--mid-dark) 82.48%,
+            var(--mid-dark) 87.4%,
+            var(--dark-color) 87.48%);
 }
 
-body{
+body {
     background-image: var(--background);
     color: #070707;
     font-family: "Kanit", sans-serif;
     font-size: 25px;
     height: 100vh;
-    display:grid;
+    display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
 /* Header */
-header{
+header {
     width: 100%;
     height: 80px;
     display: block;
     background-color: var(--not-black);
 }
-.inner-header{
+
+.inner-header {
     width: 100%;
     height: 100%;
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     flex-flow: column wrap;
 }
-span{
+
+span {
     color: var(--color);
     font-weight: bold;
 }
+
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 30px 128px;
+    margin: 30px 40px;
     gap: 15px;
 }
-nav a{
+
+nav a {
     box-sizing: border-box;
-    padding: 3px 8px    ;
+    padding: 3px 8px;
     font-size: 18px;
+    border-radius: 10px;
     font-family: "montserrat", sans-serif;
     color: var(--off-white);
     font-weight: 400;
     text-decoration: none;
     transition: all 0.5s ease;
-    border-radius: 10px;
 }
+
 nav a:hover {
     text-shadow: 0 0 8px var(--light-color);
     color: var(--not-black);
@@ -114,19 +118,23 @@ nav a:hover {
     box-shadow: inset 0 0 10px var(--not-black);
     transition: all 0.5s ease;
 }
-.logo-container{
+
+.logo-container {
     height: 100%;
-    color: var(--off-white);
     display: flex;
-    align-content: center;
+    align-items: center;
+    color: var(--off-white);
 }
-.logo-container h1{
+
+.logo-container h1 {
+    padding: 0 15px;
     font-size: 30px;
-    padding: 20px 0px 0px 20px;
     font-family: "Kanit", sans-serif;
     color: var(--off-white);
 }
-/* Cierre del header y comienzo del footer */
+
+/* Fin header*/
+/* Header */
 footer {
     display: flex;
     justify-content: space-around;
@@ -136,24 +144,29 @@ footer {
     color: var(--off-white);
     font-size: 14px;
     font-weight: 100;
-    padding: 15px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
-footer h3{
+
+footer h3 {
     font-weight: 100;
     font-size: 25px;
 }
+
 .icons a {
     color: white;
     font-size: 30px;
     margin-left: 15px;
     transition: transform 0.2s ease;
 }
+
 .icons a:hover {
     transform: scale(1.5);
     transition: all 0.5s ease;
     color: var(--color);
 }
-/* Cierre del Footer */
+
+/* Fin Footer */
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -162,10 +175,12 @@ footer h3{
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 .intro {
     flex: 1;
     min-width: 280px;
 }
+
 .intro h2 {
     font-size: 35px;
     margin-bottom: 15px;
@@ -176,11 +191,13 @@ footer h3{
     margin-bottom: 20px;
     color: #aaa;
 }
+
 .btns {
     display: flex;
     gap: 15px;
-} 
-.btn{
+}
+
+.btn {
     padding: 3px 10px;
     border: 3px solid var(--mid-light);
     border-radius: 20px;
@@ -188,7 +205,8 @@ footer h3{
     text-decoration: none;
     transition: background-color 0.3s ease, border-color 0.3s;
     font-weight: bold;
-} 
+}
+
 .btn:hover {
     text-shadow: 0 0 8px var(--light-color);
     color: var(--not-black);
@@ -198,6 +216,7 @@ footer h3{
     box-shadow: inset 0 0 10px var(--not-black);
     transition: all 0.5s ease;
 }
+
 .imagen {
     flex: 1;
     min-width: 250px;
@@ -205,9 +224,11 @@ footer h3{
     justify-content: center;
     align-items: center;
 }
+
 .imagen img {
     max-width: 80%;
 }
+
 /* Cards */
 .cards-container {
     display: flex;
@@ -217,6 +238,7 @@ footer h3{
     gap: 32px;
     flex-flow: wrap;
 }
+
 .cards-container h2 {
     font-size: 35px;
     margin: 15px;
@@ -224,10 +246,12 @@ footer h3{
     text-align: center;
     width: 100%;
 }
+
 .cards-container p {
     margin-bottom: 10px;
     color: var(--mid-dark);
 }
+
 .cards-container .card {
     background-color: var(--off-white);
     border-radius: 20px;
@@ -241,30 +265,104 @@ footer h3{
     justify-content: center;
     align-items: center;
 }
+
 .cards-container .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px var(--shadow);
 }
+
 .cards-container .card h3 {
     font-size: 30px;
     margin-bottom: 10px;
     color: var(--dark-color);
 }
-.cards-container .card img{
+
+.cards-container .card img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin: 10px;
 }
-.cards-container .card a { 
+
+.cards-container .card a {
     box-sizing: border-box;
-    padding: 3px 8px    ;
+    padding: 3px 8px;
     font-size: 30px;
     font-family: "montserrat", sans-serif;
     color: var(--not-black);
     font-weight: bold;
-    padding: 3px 8px;
     text-decoration: none;
     transition: all 0.5s ease;
-    border-radius: 10px; 
+    border-radius: 10px;
+}
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    flex-flow: column nowrap;
+    padding: 50px 10%;
+    margin: 50px;
+    color: var(--off-white);
+    background-color: rgba(238, 240, 242, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section h2{
+    font-size: 35px;
+    margin: 15px;
+    color: var(--not-black);
+    text-align: center;
+    width: 100%;
+}
+.contact-section p{
+    margin-bottom: 10px;
+    color: var(--not-black);
+}
+.contact-section form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: var(--not-black);
+}
+.contact-section form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--mid-light);
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+    color: var(--not-black);
+    font-weight: bold;
+    text-decoration: none;
+}
+.contact-section form textarea{
+    border-radius: 10px;
+    border: 1px solid var(--mid-light);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: "Kanit", sans-serif;
+}
+.contact-section form button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+    color: var(--not-black);
+    text-decoration: none;
+    background-color: var(--off-white);
+    border: 1px solid var(--mid-light);
+    transition: all 0.5s ease;
+}
+.contact-section form button:hover{
+    text-shadow: 0 0 8px var(--light-color);
+    color: var(--not-black);
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--color);
+    box-shadow: inset 0 0 10px var(--not-black);
 }
